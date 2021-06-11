@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.9.5]
 
     steps:
     - uses: actions/checkout@v2
@@ -32,6 +32,6 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
-      run: |
+      run: |                                                                                                                                                                                                                                                                
         pytest
-[![Python package](https://github.com/aryazakaria01/Stephanie-UserBot/actions/workflows/python-package.yml/badge.svg?branch=Stephanie-UserBot&event=workflow_dispatch)](https://github.com/aryazakaria01/Stephanie-UserBot/actions/workflows/python-package.yml)
+[![Python package](https://github.com/aryazakaria01/Stephanie-UserBot/actions/workflows/python-package.yml/badge.svg?branch=Geez-UserBot&event=workflow_dispatch)](https://github.com/aryazakaria01/Stephanie-UserBot/actions/workflows/python-package.yml)
