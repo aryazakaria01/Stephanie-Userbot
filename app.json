@@ -23,7 +23,7 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @VckyouuBitch di telegram",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @Badboyanim di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -176,7 +176,7 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
-    "GEEZ_TEKS_KUSTOM": {
+    "STEPHANIE_TEKS_KUSTOM": {
       "description": "Kustom Pesan Alive Mu Untuk Perintah .gezza (Isi Terserah)",
       "required": false
     },
