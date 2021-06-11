@@ -203,9 +203,9 @@ async def pingme(pong):
 
 
 CMD_HELP.update({
-    "ping": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&ping` | `&lping` | `&xping` | `&pings` | `&sping`\
+    "ping": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ping` | `.lping` | `.xping` | `.pings` | `.sping`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&speed`\
+         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.speed`\
          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&pong`\
+         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pong`\
          \n↳ : Sama Seperti Perintah Ping."})
