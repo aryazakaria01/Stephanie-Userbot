@@ -197,7 +197,7 @@ async def pingme(pong):
     await pong.edit(f"**Oᴡɴᴇʀ : {ALIVE_NAME}**\n`%sms`" % (duration))
 
 
-CMD_HELP&update({
+CMD_HELP & update({
     "ping": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&ping` | `&lping` | `&xping` | `&pings` | `&sping`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
          \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&speed`\
