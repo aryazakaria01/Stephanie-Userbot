@@ -1,4 +1,4 @@
-<p align="center"> 卍 Userbot Menggunakan Library Telethon卍</p>
+<p align="center"> 卍 Userbot Menggunakan Library Telethon 卍</p>
 <p align="left">
   <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
   </p>
