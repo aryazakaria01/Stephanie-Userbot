@@ -273,14 +273,14 @@ async def redis(alive):
     await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
     await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
     await alive.edit("__𝐗...𝐒𝐈𝐒𝐓𝐄𝐌...𝐗__")
-    await alive.edit("卍Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍")
+    await alive.edit("卍 Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏 卍")
     await alive.edit("⚡")
     await asyncio.sleep(3)
     await alive.edit("😎")
     await asyncio.sleep(3)
     output = (
         f"**╭╼═✯══════════════✯═╾╮**\n"
-        f" ㅤ**★ 卍Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍 ★** \n"
+        f" ㅤ**★ 卍 Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏 卍 ★** \n"
         f"**╰╼═✯══════════════✯═╾╯**\n"
         f"╭╼════════════════════╾╮ \n"
         f"│  ⇱ **ALIVE BOT** ⇲ \n"
@@ -340,27 +340,27 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update({
     "system":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&sysd`"
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sysd`"
     "\n↳ : Shows system information using neofetch."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&db`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.db`"
     "\n↳ : Shows database related info."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&spc`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.spc`"
     "\n↳ : Show system specification."
 })
 CMD_HELP.update({
     "alive":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&alive` or `&on` or `&stephaniealive`"
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on` or `.stephaniealive`"
     "\n↳ : To see whether your bot is working or not."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&aliveu` <text>"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.aliveu` <text>"
     "\n↳ : Changes the 'user' in alive to the text you want."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&restalive`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restalive`"
     "\n↳ : Resets the user to default."
 })
 CMD_HELP.update(
     {
         "botversion":
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&botver`"
+        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.botver`"
         "\n↳ : Shows the userbot version."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `&pip` <module(s)>"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pip` <module(s)>"
         "\n↳ : Does a search of pip modules(s)."
     })
