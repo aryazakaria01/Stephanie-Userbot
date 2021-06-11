@@ -164,8 +164,8 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡Geez-Project⚡ Versi:** \n "
-            f"heads/Geez-Userbot-0-x634i7u1"
+            "**⚜-**⚡Stephanie-UserBot⚡ Versi:** \n "
+            f"heads/Stephanie-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
@@ -223,14 +223,14 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:geezalive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:myalive)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"\n__**{GEEZ_TEKS_KUSTOM}**__\n"
         f"**╭───────────────────**\n"
-        f"**├[• 🤴 Geez Owner** \n"
+        f"**├[• 🤴 StephanieOwner** \n"
         f"├[•   : `{DEFAULTUSER}` \n"
         f"**├[• 🔎 Username** \n"
         f"├[•   : `@{user.username}` \n"
@@ -238,7 +238,7 @@ async def amireallyalive(alive):
         f"├[•⚙️ `Telethon :`Ver {version.__version__} \n"
         f"├[•🐍 `Python   :`Ver {python_version()} \n"
         f"├[•👾 `Bot Ver  :`{BOT_VER} \n"
-        f"├[•📂 `Modules  :`{len(modules)} \n"
+        f"├[•📂 `Plugins :`{len(modules)} \n"
         f"╰─────────────────")
     if ALIVE_LOGO:
         try:
@@ -260,70 +260,44 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:gezza)\s?(.)?")
-async def amireallyalive(alive):
-    await bot.get_me()
-    await get_readable_time((time.time() - StartTime))
-    output = (
-        f"**ㅤㅤㅤㅤ ⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡**\n"
-        f"╔══════════╬════╬══════════╗ \n"
-        f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＧΞ ΞＺ](t.me/VckyouuBitch)             ㅤ ║\n"
-        f"╟⟩⟩ 🖥️ • `ꜱʏꜱᴛᴇᴍ.   :`Ubuntu 20.10            ║\n"
-        f"╟⟩⟩ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ  :`v.{version.__version__}                ㅤㅤ  ║\n"
-        f"╟⟩⟩ 🐍 • `ᴘʏᴛʜᴏɴ.   :`v.{python_version()} ㅤㅤㅤㅤ         ║\n"
-        f"╟⟩⟩ 👾 • `ʙᴏᴛ      :`v.{BOT_VER}                ㅤㅤㅤ ║\n"
-        f"╟⟩⟩ 📂 • `ᴍᴏᴅᴜʟᴇ   :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   ║\n"
-        f"╚══════════╬════╬══════════╝ \n"
-        f"🔰 : [𝗥𝗘𝗣𝗢-𝙂𝙚𝙚𝙯](https://github.com/vckyou/Geez-UserBot)\n👥 : [ＧΞ ΞＺ-𝗧𝗘𝗔𝗠](t.me/GeezSupportGroup)\n👤 : [𝗢𝗪𝗡𝗘𝗥](t.me/Vckyouuu)\n"
-    )
-    if ALIVE_LOGO:
-        try:
-            logo = ALIVE_LOGO
-            await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(200)
-            await msg.delete()
-        except BaseException:
-            await alive.edit(
-                output + "\n\n *`The provided logo is invalid."
-                "\nMake sure the link is directed to the logo picture`"
-            )
-            await asyncio.sleep(100)
-            await alive.delete()
-    else:
-        await alive.edit(output)
-        await asyncio.sleep(100)
-        await alive.delete()
-
-
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:alive)\s?(.)?")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__Reconnect.__")
-    await alive.edit("__Reconnect..__")
-    await alive.edit("__Reconnect.__")
-    await alive.edit("__Reconnect..__")
-    await alive.edit("__Connecting...__")
-    await alive.edit("__Connecting..__")
-    await alive.edit("__Connecting...__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑...__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑...__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
+    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
+    await alive.edit("__𝐗...𝐒𝐈𝐒𝐓𝐄𝐌...𝐗__")
+    await alive.edit("卍Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍")
     await alive.edit("⚡")
-    await asyncio.sleep(2)
+    await asyncio.sleep(3)
+    await alive.edit("😎")
+    await asyncio.sleep(3)
     output = (
-        f"╭═──────╼═⌘═╾───────═\n"
-        f"┃⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡\n"
-        f"╰═─────╼══⌘══╾─────═ \n"
-        f" ❍ `Name     :` {DEFAULTUSER} \n"
-        f" ❍ `Username :` @{user.username} \n"
-        f" ❍ `Telethon :` Ver {version.__version__} \n"
-        f" ❍ `Python   :` Ver {python_version()} \n"
-        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
-        f" ❍ `Bot Ver  :` {BOT_VER} \n"
-        f" ❍ `Modules  :` {len(modules)} Modules \n"
-        f"╭═───────╼⌘╾───────═ \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
-        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
-        f"╰═──────╼═⌘═╾───────═")
+        f"**╭╼═✯══════════════✯═╾╮**\n"
+        f" ㅤ**★ 卍Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍 ★** \n"
+        f"**╰╼═✯══════════════✯═╾╯**\n"
+        f"╭╼════════════════════╾╮ \n"
+        f"│  ⇱ **ALIVE BOT** ⇲ \n"
+        f"┟╼════════════════════╾┤ \n"
+        f"╟◈ 🤴 `Owner   :`{DEFAULTUSER} \n"
+        f"╟◈ 🔎 `Username :`@{user.username} \n"
+        f"╟◈ ⚙️ `Telethon :`v. {version.__version__} \n"
+        f"╟◈ 🐍 `Python   :`v. {python_version()} \n"
+        f"╟◈ 🛠️ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
+        f"╟◈ 👾 `Bot Ver  :`v. {BOT_VER} \n"
+        f"╟◈ 📂 `Plugins  :`{len(modules)} Plugins \n"
+        f"┞╼════════════════════╾┤ \n"
+        f"├◈ **Support Terus Repo Kami** \n"
+        f"│    **Dengan Link Di Bawah Ini.** \n"
+        f"╰╼════════════════════╾╯ \n"
+        f"[Repo Userbot](https://github.com) | [Grup Support](t.me/StephanieSupport) | "
+        f"[Developer King](t.me/badboyanim)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -342,7 +316,6 @@ async def redis(alive):
         await alive.edit(output)
         await asyncio.sleep(100)
         await alive.delete()
-
 
 @register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
