@@ -1,4 +1,4 @@
-<p align="center"> 卍 Userbot Menggunakan Library [Telethon](https://github.com/lonamiwebs/telethon) 卍</p>
+<p align="center"> 卍 Userbot Menggunakan Library Telethon卍</p>
 <p align="left">
   <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
   </p>
@@ -63,6 +63,7 @@
 *   [TeamUltroid](https://github.com/TeamUltroid/Ultroid)    Ultroid
 *   [ankushKun](https://github.com/ankushKun/weebmax)    WeebMax
 *   [ramadhani892](https://github.com/ramadhani892/RAM-UBOT)    RAM-UBOT
+*   [Telethon](https://github.com/lonamiwebs/telethon) 
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
