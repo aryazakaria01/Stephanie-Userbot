@@ -1,4 +1,4 @@
-<p align="center"> 🚀 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 🚀</p>
+<p align="center"> 卍 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 卍</p>
 <p align="left">
   <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
   </p>
@@ -10,12 +10,12 @@
   </a></p>
 
 ![VIEWS](https://komarev.com/ghpvc/?username=vckyou)
-![Repo Size](https://img.shields.io/github/repo-size/vckyou/Geez-UserBot?&style=plastic&logo=github)
-[![GitHub issues](https://img.shields.io/github/issues/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/issues)
+![Repo Size](https://img.shields.io/github/repo-size/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)
+[![GitHub issues](https://img.shields.io/github/issues/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/issues)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/graphs/commit-activity)
 [![GitHub contributors](https://img.shields.io/github/contributors/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://GitHub.com/vckyou/Geez-UserBot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/Vckyou/Geez-UserBot/pulls)
-[![PR Closed](https://img.shields.io/github/issues-pr-closed/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/pulls?q=is:closed)
+[![PR Closed](https://img.shields.io/github/issues-pr-closed/aryazakaria01/Stephanie-Userbot?&style=plastic&logo=github)](https://github.com/aryazakaria01/Stephanie-Userbot/pulls?q=is:closed)
 <p align="justify">
 <a href="https://github.com/vckyou/Geez-UserBot/commits/Geez-UserBot"><img src="https://img.shields.io/github/last-commit/vckyou/Geez-UserBot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
 <a href="https://github.com/vckyou/Geez-UserBot/actions/workflows/main.yml"><img src="https://img.shields.io/github/workflow/status/vckyou/Geez-UserBot/CI/Geez-UserBot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="CI" /></a>
@@ -29,7 +29,7 @@
 <a href="https://t.me/StephanieSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
 <a href="https://t.me/VcgSupportGroupp"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
-## ⚡Stephanie-UserBot
+## 卍 Stephanie-UserBot 卍
 ![Stephanie UserBot](https://telegra.ph/file/9464f116132df37c649c8.png)
 
 <h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
@@ -40,7 +40,7 @@
 
 **Generate String Using Replit⤵️**
 
-<a href="https://replit.com/@Vckyou/Geez-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
+<a href="https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
 ## <p align="center">DEPLOY TO HEROKU</p>
 
@@ -68,5 +68,5 @@
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
-## Stay Support 🚀
-*   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
+## Stay Support 卍
+*   [Userge](https://github.com/UsergeTeam/Userge) and [Telethon](https://github.com/aldoaprilyan3/One-Piece)
