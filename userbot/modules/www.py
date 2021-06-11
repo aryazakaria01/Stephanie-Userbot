@@ -149,6 +149,7 @@ async def pingme(pong):
                     f"`{uptime}` \n"
                     f"**卍 Owner:** `{ALIVE_NAME}`" % (duration))
 
+
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
