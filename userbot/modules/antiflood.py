@@ -39,7 +39,6 @@ async def _(event):
             entity=event.chat_id,
             message="""**Otomatis Anti Banjir**
 @admin [Pengguna](tg://user?id={}) membanjiri obrolan.
-
 `{}`""".format(event.message.from_id, str(e)),
             reply_to=event.message.id
         )
