@@ -66,5 +66,5 @@
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
-## Stay Support 卍
+## 卍 Stay Support 卍
 *   [Userge](https://github.com/UsergeTeam/Userge) and [Telethon](https://github.com/aldoaprilyan3/One-Piece)
