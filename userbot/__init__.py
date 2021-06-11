@@ -429,7 +429,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("⚡Stephanie Userbot⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/aryazakaria01/Stephanie-Userbot)")
+                await event.reply("卍 Stephanie Userbot 卍, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/aryazakaria01/Stephanie-Userbot)")
             else:
                 await event.reply(f"`Hai {DEFAULTUSER}\n\nApa Kabarmu ? 😊`")
 
@@ -445,7 +445,7 @@ with bot:
                     text="{}"
                     f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"
                     "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
-                        "** ╡⚡Stephanie Userbot⚡╞ **",
+                        "** ╡卍 Stephanie Userbot 卍╞ **",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -453,21 +453,21 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ╡⚡Stephanie Userbot⚡╞ ",
+                    "Bantuan Dari ╡卍 Stephanie Userbot 卍╞ ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ╡⚡Stephanie Userbot⚡╞ ",
-                    text="""**Anda Bisa Membuat ⚡Stephanie Userbot⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
+                    " ╡卍 Stephanie Userbot 卍╞ ",
+                    text="""**Anda Bisa Membuat 卍 Stephanie Userbot 卍 Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "⚡Stephanie⚡",
+                                "卍 Stephanie 卍",
                                 "https://github.com/aryazakaria01/Stephanie-Userbot"),
                             custom.Button.url(
-                                "✨𝗢𝘄𝗻𝗲𝗿",
+                                "卍 Owner 卍",
                                 "t.me/Badboyanim")]],
                     link_preview=False,
                 )
