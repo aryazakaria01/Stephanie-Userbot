@@ -317,6 +317,7 @@ async def redis(alive):
         await asyncio.sleep(100)
         await alive.delete()
 
+
 @register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
