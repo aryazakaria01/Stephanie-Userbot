@@ -12,8 +12,6 @@
 ![VIEWS](https://komarev.com/ghpvc/?username=vckyou)
 ![Repo Size](https://img.shields.io/github/repo-size/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)
 [![GitHub issues](https://img.shields.io/github/issues/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)](https://github.com/aryazakaria01/Stephanie-Userbot/issues)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/graphs/commit-activity)
-[![GitHub contributors](https://img.shields.io/github/contributors/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://GitHub.com/vckyou/Geez-UserBot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/Vckyou/Geez-UserBot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/aryazakaria01/Stephanie-Userbot?&style=plastic&logo=github)](https://github.com/aryazakaria01/Stephanie-Userbot/pulls?q=is:closed)
 <p align="justify">
