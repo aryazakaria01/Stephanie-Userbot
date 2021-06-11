@@ -9,10 +9,10 @@
   <a href="https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE"><img src="https://img.shields.io/github/license/vckyou/Geez-UserBot?&style=social&logo=github">
   </a></p>
 
-![VIEWS](https://komarev.com/ghpvc/?username=vckyou)
+![VIEWS](https://komarev.com/ghpvc/?username=aryazakaria01)
 ![Repo Size](https://img.shields.io/github/repo-size/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)
 [![GitHub issues](https://img.shields.io/github/issues/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)](https://github.com/aryazakaria01/Stephanie-Userbot/issues)
-[![PR Open](https://img.shields.io/github/issues-pr/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/Vckyou/Geez-UserBot/pulls)
+[![PR Open](https://img.shields.io/github/issues-pr/aryazakaria01/Stephanie-UserBot?&style=plastic&logo=github)](https://github.com/Vckyou/Geez-UserBot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/aryazakaria01/Stephanie-Userbot?&style=plastic&logo=github)](https://github.com/aryazakaria01/Stephanie-Userbot/pulls?q=is:closed)
 <p align="justify">
 <a href="https://github.com/vckyou/Geez-UserBot/commits/Geez-UserBot"><img src="https://img.shields.io/github/last-commit/vckyou/Geez-UserBot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
