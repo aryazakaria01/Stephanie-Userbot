@@ -60,6 +60,10 @@
 *   [AvinashReddy3108](https://github.com/AvinashReddy3108)    PaperplaneExtended
 *   [TeamUserge](https://github.com/UsergeTeam/Userge)    Userge
 *   [sandy1709](https://github.com/sandy1709/catuserbot)    CatUserbot
+*   [apisuserbot](https://github.com/apisuserbot/King-Userbot)    King-Userbot
+*   [aldoaprilyan3](https://github.com/aldoaprilyan3/One-Piece)    One-Piece
+*   [TeamUltroid](https://github.com/TeamUltroid/Ultroid)    Ultroid
+*   [ankushKun](https://github.com/ankushKun/weebmax)    WeebMax
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
