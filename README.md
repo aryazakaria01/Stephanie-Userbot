@@ -64,6 +64,7 @@
 *   [aldoaprilyan3](https://github.com/aldoaprilyan3/One-Piece)    One-Piece
 *   [TeamUltroid](https://github.com/TeamUltroid/Ultroid)    Ultroid
 *   [ankushKun](https://github.com/ankushKun/weebmax)    WeebMax
+*   [ramadhani892](https://github.com/ramadhani892/RAM-UBOT)    RAM-UBOT
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
