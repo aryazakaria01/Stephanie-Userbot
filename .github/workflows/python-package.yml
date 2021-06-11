@@ -2,9 +2,9 @@
 
 on:
   push:
-    branches: [ Stephanie-UserBot ]
+    branches: [ Geez-UserBot ]
   pull_request:
-    branches: [ Stephanie-UserBot ]
+    branches: [ Geez-UserBot ]
 
 jobs:
   build:
