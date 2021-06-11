@@ -1,4 +1,4 @@
-<p align="center"> 卍 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 卍</p>
+<p align="center"> 卍 Userbot Menggunakan Library [Telethon](https://github.com/lonamiwebs/telethon) 卍</p>
 <p align="left">
   <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
   </p>
@@ -30,7 +30,7 @@
 ## 卍 Stephanie-UserBot 卍
 ![Stephanie UserBot](https://telegra.ph/file/9464f116132df37c649c8.png)
 
-<h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
+<h3 align="center">Userbot Yang digunakan untuk telegram dalam hal bersenang senang.</h3>
 <p align="center">&nbsp;</p>
 
 
@@ -67,4 +67,4 @@
 
 
 ## 卍 Stay Support 卍
-*   [Userge](https://github.com/UsergeTeam/Userge) and [Telethon](https://github.com/aldoaprilyan3/One-Piece)
+*   [Userge](https://github.com/UsergeTeam/Userge) and [Telethon](https://github.com/lonamiwebs/telethon)
