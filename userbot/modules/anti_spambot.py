@@ -131,7 +131,7 @@ async def ANTI_SPAMBOTS(welcm):
                                 spambot = True
 
                     if spambot:
-                        print(f"Potential Spam Message: {message.text}")
+                        print(f"Potensi pesan spam: {message.text}")
                         await message.delete()
                         break
 
@@ -145,9 +145,9 @@ async def ANTI_SPAMBOTS(welcm):
                     if ANTI_SPAMBOT_SHOUT:
                         await welcm.reply(
                             "@admins\n"
-                            "`ANTI SPAMBOT DETECTOR!\n"
-                            "THIS USER MATCHES MY ALGORITHMS AS A SPAMBOT!`"
-                            f"REASON: {reason}"
+                            "`Anti spam bot deteksi!\n"
+                            "Orang ini adalah spammer!`"
+                            f"Alasan: {reason}"
                         )
                         kicked = False
                         reported = True
