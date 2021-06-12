@@ -114,9 +114,9 @@ async def repo_is_here(wannasee):
         "│                   ʀᴇᴘᴏ\n"
         "│       [卍 Stephanie-Project 卍](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
         "├‒─‒──────────‒─‒╯\n"
-        "│卍 **ᴏᴡɴᴇʀ :** 卍[Stephanie](t.me/Badboyanim)\n"
+        "│卍 **ᴏᴡɴᴇʀ 卍:** [Arya Zakaria](t.me/Badboyanim)\n"
         "╰‒─‒──────────‒─‒╯\n"
-        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/aryazakaria01/Stephanie-Userbot/blob/Geez-UserBot/LICENSE)"
+        "  卍 𝗟𝗶𝗰𝗲𝗻𝘀𝗲 卍: [GPL-3.0 License](https://github.com/aryazakaria01/Stephanie-Userbot/blob/Geez-UserBot/LICENSE)"
     )
 
 
