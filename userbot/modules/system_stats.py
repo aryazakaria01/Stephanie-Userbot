@@ -285,7 +285,7 @@ async def redis(alive):
         f"╭╼════════════════════╾╮ \n"
         f"│  ⇱ **ALIVE BOT** ⇲ \n"
         f"┟╼════════════════════╾┤ \n"
-        f"╟◈ 🤴 `Owner   :`{DEFAULTUSER} \n"
+        f"╟◈ 🤴 `Owner    :`{DEFAULTUSER} \n"
         f"╟◈ 🔎 `Username :`@{user.username} \n"
         f"╟◈ ⚙️ `Telethon :`v. {version.__version__} \n"
         f"╟◈ 🐍 `Python   :`v. {python_version()} \n"
@@ -296,7 +296,7 @@ async def redis(alive):
         f"├◈ **Support Terus Repo Kami** \n"
         f"│    **Dengan Link Di Bawah Ini.** \n"
         f"╰╼════════════════════╾╯ \n"
-        f"[Repo Userbot](https://github.com) | [Grup Support](t.me/StephanieSupport) | "
+        f"[Repo Userbot](https://github.com) | [Grup Support](t.me/StephanieSupportGroup) | "
         f"[Developer King](t.me/badboyanim)")
     if ALIVE_LOGO:
         try:
