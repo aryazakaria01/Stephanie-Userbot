@@ -87,7 +87,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Stephanie-Userbot Repo](https://github.com/aryazakaria01/Stephanie-UserBot/blob/Geez-UserBot/README.md)"
+        "\n[卍 Stephanie-Userbot Repo](https://github.com/aryazakaria01/Stephanie-UserBot/blob/Geez-UserBot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
@@ -112,9 +112,9 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭‒─‒──────────‒─‒╮\n"
         "│                   ʀᴇᴘᴏ\n"
-        "│       [⚡Geez-Project⚡](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
+        "│       [卍 Stephanie-Project 卍](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
         "├‒─‒──────────‒─‒╯\n"
-        "│🔰 **ᴏᴡɴᴇʀ :** [Stephanie](t.me/Badboyanim)\n"
+        "│卍 **ᴏᴡɴᴇʀ :** 卍[Stephanie](t.me/Badboyanim)\n"
         "╰‒─‒──────────‒─‒╯\n"
         "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/aryazakaria01/Stephanie-Userbot/blob/Geez-UserBot/LICENSE)"
     )
