@@ -1,7 +1,6 @@
-# Created by Apis 
+# Created by Apis
 # Jan hapus credit ya anjing!!!
 
-from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
 
