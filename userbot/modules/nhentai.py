@@ -46,7 +46,13 @@ async def _(event):
         msg += "\n**Parodies :**"
         parodies = []
         for parody in doujin.parody:
-            parodies.append("#" + parody.name.replace(" ", "_").replace("-", "_"))
+            parodies.append(
+                "#" +
+                parody.name.replace(
+                    " ",
+                    "_").replace(
+                    "-",
+                    "_"))
         msg += "\n" + " ".join(natsorted(parodies))
     if doujin.character:
         msg += "\n**Characters :**"
@@ -64,19 +70,37 @@ async def _(event):
         msg += "\n**Artists :**"
         artists = []
         for artist in doujin.artist:
-            artists.append("#" + artist.name.replace(" ", "_").replace("-", "_"))
+            artists.append(
+                "#" +
+                artist.name.replace(
+                    " ",
+                    "_").replace(
+                    "-",
+                    "_"))
         msg += "\n" + " ".join(natsorted(artists))
     if doujin.language:
         msg += "\n**Languages :**"
         languages = []
         for language in doujin.language:
-            languages.append("#" + language.name.replace(" ", "_").replace("-", "_"))
+            languages.append(
+                "#" +
+                language.name.replace(
+                    " ",
+                    "_").replace(
+                    "-",
+                    "_"))
         msg += "\n" + " ".join(natsorted(languages))
     if doujin.category:
         msg += "\n**Categories :**"
         categories = []
         for category in doujin.category:
-            categories.append("#" + category.name.replace(" ", "_").replace("-", "_"))
+            categories.append(
+                "#" +
+                category.name.replace(
+                    " ",
+                    "_").replace(
+                    "-",
+                    "_"))
         msg += "\n" + " ".join(natsorted(categories))
     msg += f"\n**Pages :**\n{doujin.num_pages}"
     await event.edit(msg, link_preview=True)
