@@ -7,7 +7,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^.developer(?: |$)(.*)")
 async def _(event):
-    event.pattern.match_group(1)
+    event.pattern_match.group(1)
     await event.edit(
         f"__Berikut Developer Repo Userbot Kami :__ "
         f"• [Arya Zakaria](https://t.me/Badboyanim) "
