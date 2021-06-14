@@ -3,7 +3,7 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
-""" Userbot module for getting information about the server. """
+"""Userbot Module For Getting Information About The Server."""
 
 
 import asyncio
@@ -18,7 +18,7 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, GEEZ_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, LYNX_TEXT_CUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, INSTAGRAM_ALIVE, bot
 from userbot.events import register
 
 
@@ -47,7 +47,7 @@ async def get_readable_time(seconds: int) -> str:
         seconds = int(remainder)
 
     for x in range(len(time_list)):
-        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+       time_list[x] = str(time_list[x]) + time_suffix_list[x]
 
     if len(time_list) == 4:
         up_time += time_list.pop() + ", "
@@ -150,7 +150,7 @@ async def bot_ver(event):
             stderr=asyncPIPE,
         )
         stdout, stderr = await ver.communicate()
-        str(stdout.decode().strip()) + str(stderr.decode().strip())
+        verout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         rev = await asyncrunapp(
             "git",
@@ -164,8 +164,8 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡Stephanie-UserBot⚡ Versi:** \n "
-            f"heads/Stephanie-Userbot-0-x634i7u1"
+            "**⚜-**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Versi:** \n "
+            f"heads/Lynx-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
@@ -223,23 +223,30 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:myalive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:lynx|xon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"\n__**{GEEZ_TEKS_KUSTOM}**__\n"
-        f"**╭───────────────────**\n"
-        f"**├[• 🤴 StephanieOwner** \n"
-        f"├[•   : `{DEFAULTUSER}` \n"
-        f"**├[• 🔎 Username** \n"
-        f"├[•   : `@{user.username}` \n"
-        f"├──────────────────\n"
-        f"├[•⚙️ `Telethon :`Ver {version.__version__} \n"
-        f"├[•🐍 `Python   :`Ver {python_version()} \n"
-        f"├[•👾 `Bot Ver  :`{BOT_VER} \n"
-        f"├[•📂 `Plugins :`{len(modules)} \n"
-        f"╰─────────────────")
+        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮**\n"
+        f"**       ⊏┊[⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](t.me/StephanieSupportGroup) ⊨〛💨 **\n"
+        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯**\n"
+        f"╭╼════════════════════╾╮\n"
+        f"│    ⇱  𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞 ⇲ \n"
+        f"┟╼════════════════════╾┤\n"
+        f"╟◈ 😼  `Lynx     :` {DEFAULTUSER}\n"
+        f"╟◈ 🔎  `Username :` @{user.username}\n"
+        f"╟◈ ⚙️  `Telethon :` v. {version.__version__}\n"
+        f"╟◈ 🐍  `Python   :` v. {python_version()}\n"
+        f"╟◈ 👾  `Bot Ver  :` v. {BOT_VER}\n"
+        f"╟◈ 🛠️  `Branch   :` {UPSTREAM_REPO_BRANCH}\n"
+        f"╟◈ 💻  `System   :` Ubuntu 20.10\n"
+        f"╟◈ 📂  `Plugins  :` {len(modules)} Plugins\n"
+        f"┞╼════════════════════╾┤\n"
+        f"├◈ **{LYNX_TEXT_CUSTOM}**\n"
+        f"╰╼════════════════════╾╯\n"
+        f"| [𝗥𝗲𝗽𝗼](https://github.com/aryazakaria01/Stephanie-Userbot) | [𝗟𝘆𝗻𝘅-𝗧𝗲𝗮𝗺](t.me/StephanieSupportGroup) | 
+
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -260,44 +267,109 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:kenzo|iam)\s?(.)?")
+async def amireallyalive(alive):
+    user = await bot.get_me()
+    await get_readable_time((time.time() - StartTime))
+    output = (
+        f"**ㅤㅤㅤㅤ ⚡【𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏】⚡**\n"
+        f"╔══════════╣۩ ✞ ۩╠══════════╗ \n"
+        f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＫΞＮＺＯ](t.me/Badboyanim)             ㅤ ║\n"
+        f"╟⟩⟩ 🖥️ • `ꜱʏꜱᴛᴇᴍ.   :`Ubuntu 20.10            ║\n"
+        f"╟⟩⟩ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ  :`v.{version.__version__}                ㅤㅤ  ║\n"
+        f"╟⟩⟩ 🐍 • `ᴘʏᴛʜᴏɴ.   :`v.{python_version()} ㅤㅤㅤㅤ         ║\n"
+        f"╟⟩⟩ 👾 • `ʙᴏᴛ      :`v.{BOT_VER}                ㅤㅤㅤ ║\n"
+        f"╟⟩⟩ 📂 • `ᴍᴏᴅᴜʟᴇ   :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   ║\n"
+        f"╚══════════╣۩ ✞ ۩╠══════════╝ \n"
+        f"😼 : [𝗥𝗘𝗣𝗢-𝗟𝘆𝗻𝘅](https://github.com/aryazakaria01/Stephanie-Userbot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/GeezSupportGroup)\n👩‍💻 : [𝗙𝗢𝗥𝗞-𝗘𝗗𝗜𝗧𝗢𝗥](t.me/Badboyanim)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/Badboyanim)\n"
+            )
+    if ALIVE_LOGO:
+        try:
+            logo = ALIVE_LOGO
+            await alive.delete()
+            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            await asyncio.sleep(200)
+            await msg.delete()
+        except BaseException:
+            await alive.edit(
+                output + "\n\n *`The provided logo is invalid."
+                "\nMake sure the link is directed to the logo picture`"
+            )
+            await asyncio.sleep(100)
+            await alive.delete()
+    else:
+        await alive.edit(output)
+        await asyncio.sleep(100)
+        await alive.delete()
+
+
+@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑...__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑...__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑..__")
-    await alive.edit("__𝐄 𝐑 𝐑 𝐎 𝐑.__")
-    await alive.edit("__𝐗...𝐒𝐈𝐒𝐓𝐄𝐌...𝐗__")
-    await alive.edit("卍 Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏 卍")
+    await alive.edit("__Connecting to server.__")
+    await alive.edit("__Connecting to server..__")
+    await alive.edit("__Connecting to server...__")
+    await alive.edit("__Connecting to server.__")
+    await alive.edit("__Connecting to server..__")
+    await alive.edit("__Connecting to server...__")
+    await alive.edit("__Connecting to server.__")
+    await alive.edit("__Connecting to server..__")
+    await alive.edit("__Connecting to server...__")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡              🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡             🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡            🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡           🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡          🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡         🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡        🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡       🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡      🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡     🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡    🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡   🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡  🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ 🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊🐈⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽🐈𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍🐈𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀🐈𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎🐈𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐🐈𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-🐈𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅🐈𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻🐈-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆🐈𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟🐈𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡🐈𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("🐈𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
     await alive.edit("⚡")
     await asyncio.sleep(3)
-    await alive.edit("🗿")
+    await alive.edit("😼")
     await asyncio.sleep(3)
     output = (
-        f"**╭╼═✯══════════════✯═╾╮**\n"
-        f" ㅤ**★ 卍 Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏 卍 ★** \n"
-        f"**╰╼═✯══════════════✯═╾╯**\n"
-        f"╭╼════════════════════╾╮ \n"
-        f"│  ⇱ **ALIVE BOT** ⇲ \n"
-        f"┟╼════════════════════╾┤ \n"
-        f"╟◈ 🤴 `Owner    :`{DEFAULTUSER} \n"
-        f"╟◈ 🔎 `Username :`@{user.username} \n"
-        f"╟◈ ⚙️ `Telethon :`v. {version.__version__} \n"
-        f"╟◈ 🐍 `Python   :`v. {python_version()} \n"
-        f"╟◈ 🛠️ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"╟◈ 👾 `Bot Ver  :`v. {BOT_VER} \n"
-        f"╟◈ 📂 `Plugins  :`{len(modules)} Plugins \n"
-        f"┞╼════════════════════╾┤ \n"
-        f"├◈ **Support Terus Repo Kami** \n"
-        f"│    **Dengan Link Di Bawah Ini.** \n"
-        f"╰╼════════════════════╾╯ \n"
-        f"[Repo Userbot](https://github.com) | [Grup Support](t.me/StephanieSupportGroup) | "
-        f"[Developer King](t.me/badboyanim)")
+        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮**\n"
+        f"**       ⊏┊[⚡Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](t.me/LynxUserbot) ⊨〛💨 **\n"
+        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯**\n"
+        f"╭╼════════════════════╾╮\n"
+        f"│    ⇱  𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞 ⇲ \n"
+        f"┟╼════════════════════╾┤\n"
+        f"╟◈ 😼  `Lynx     :` {DEFAULTUSER}\n"
+        f"╟◈ 🔎  `Username :` @{user.username}\n"
+        f"╟◈ ⚙️  `Telethon :` v. {version.__version__}\n"
+        f"╟◈ 🐍  `Python   :` v. {python_version()}\n"
+        f"╟◈ 👾  `Bot Ver  :` v. {BOT_VER}\n"
+        f"╟◈ 🛠️  `Branch   :` {UPSTREAM_REPO_BRANCH}\n"
+        f"╟◈ 💻  `System   :` Ubuntu 20.10\n"
+        f"╟◈ 📂  `Plugins  :` {len(modules)} Plugins\n"
+        f"┞╼════════════════════╾┤\n"
+        f"├◈ **Don't forget to support our**\n"
+        f"│    **userbot, how to press below.**\n"
+        f"╰╼════════════════════╾╯\n"
+        f"| [𝗥𝗲𝗽𝗼](https://github.com/aryazakaria01/Stephanie-Userbot) | [𝗟𝘆𝗻𝘅-𝗧𝗲𝗮𝗺](t.me/StephanieSupportGroup) | 
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -318,14 +390,14 @@ async def redis(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern="^.aliveu")
-async def amireallyaliveuser(username):
+@register(outgoing=True, pattern="^.edalive")
+async def amireallyaliveuser(username): 
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
     output = ".aliveu [new username] tidak boleh kosong"
     if not (message == ".aliveu" and message[7:8] != " "):
         newuser = message[8:]
-        global DEFAULTUSER  # global statement
+        global DEFAULTUSER # global statement
         DEFAULTUSER = username
         output = "Successfully changed user to " + newuser + "!"
     await username.edit("`" f"{output}" "`")
@@ -333,34 +405,34 @@ async def amireallyaliveuser(username):
 
 @register(outgoing=True, pattern=r"^\.resetalive$")
 async def amireallyalivereset(ureset):
-    global DEFAULTUSER  # global statement
-    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
+    global DEFAULTUSER # global statement
+    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node 
+    await ureset.edit("`" "Successfully Reset User For Ur Alive!" "`")
 
 
 CMD_HELP.update({
-    "system":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+sysd`"
-    "\n↳ : Shows system information using neofetch."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+db`"
-    "\n↳ : Shows database related info."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+spc`"
-    "\n↳ : Show system specification."
+    "system": "✘ Pʟᴜɢɪɴ : System Stats"
+"\n\n⚡𝘾𝙈𝘿⚡: `+sysd`"\
+"\n↳ : Shows system information using neofetch."
+"\n\n⚡𝘾𝙈𝘿⚡: `+db`"
+"\n↳ : Shows database related info."
+"\n\n⚡𝘾𝙈𝘿⚡: `+spc`"
+"\n↳ : Show system specification."
 })
 CMD_HELP.update({
-    "alive":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+alive` or `+on` or `+stephaniealive`"
-    "\n↳ : To see whether your bot is working or not."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+aliveu` <text>"
-    "\n↳ : Changes the 'user' in alive to the text you want."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+restalive`"
-    "\n↳ : Resets the user to default."
+    "alive": "✘ Pʟᴜɢɪɴ : Alive"
+"\n\n⚡𝘾𝙈𝘿⚡: `+alive` or `+on`"
+"\n↳ : To see whether your bot is working or not."
+"\n\n⚡𝘾𝙈𝘿⚡: `+edalive` <text>"
+"\n↳ : Changes the 'user' in alive to the text you want."
+"\n\n⚡𝘾𝙈𝘿⚡: `+restalive`"
+"\n↳ : Resets the user to default."
 })
 CMD_HELP.update(
-    {
-        "botversion":
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+botver`"
-        "\n↳ : Shows the userbot version."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `+pip` <module(s)>"
-        "\n↳ : Does a search of pip modules(s)."
-    })
+{
+    "botversion": "✘ Pʟᴜɢɪɴ : Robot Version"
+"\n\n⚡𝘾𝙈𝘿⚡: `+botver`"
+"\n↳ : Shows the userbot version."
+"\n\n⚡𝘾𝙈𝘿⚡: `+pip` <module(s)>"
+"\n↳ : Does a search of pip modules(s)."
+})
