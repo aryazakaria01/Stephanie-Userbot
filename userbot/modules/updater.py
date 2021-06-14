@@ -232,11 +232,11 @@ async def upstream(event):
 
 
 CMD_HELP.update({
-    'update':
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update`"
-    "\n• : Untuk Melihat Pembaruan Terbaru Stephanie-Project."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update now`"
-    "\n• : Memperbarui Stephanie-Project."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update deploy`"
-    "\n• : Memperbarui Stephanie-Project Dengan Cara Men-Deploy Ulang."
+    'update': "✘ Pʟᴜɢɪɴ : `Update`"\
+    "\n\n⚡𝘾𝙈𝘿⚡: `+update`"
+    "\n↳ : Untuk Melihat Update Terbaru dari Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏."
+    "\n\n⚡𝘾𝙈𝘿⚡: `+update -pull`"
+    "\n↳ : Memperbarui Stephanie-Userbot."
+    "\n\n⚡𝘾𝙈𝘿⚡: `+update -push <Nama Branch>`"
+    "\n↳ : Memperbarui Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏 Dengan Cara Men-Deploy Ulang Otomatis Lewat Heroku."
 })
