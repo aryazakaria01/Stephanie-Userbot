@@ -5,6 +5,9 @@
 # Ported @SyndicateTwenty4
 """Userbot initialization."""
 
+from userbot import (
+    ALIVE_NAME
+)
 import os
 import time
 import re
@@ -89,7 +92,9 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
 
 # Pm Permit Img
-PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
+PM_PERMIT_PIC = os.environ.get(
+    "PM_PERMIT_PIC",
+    None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -215,7 +220,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/f3c656862a017f945c0bc.png"
 
-# Link Instagram for CMD Alive 
+# Link Instagram for CMD Alive
 INSTAGRAM_ALIVE = os.environ.get("INSTAGRAM_ALIVE", None)
 
 # Last.fm Module
@@ -386,14 +391,12 @@ ISAFK = False
 AFKREASON = None
 ZALG_LIST = {}
 
-#Import Userbot - Ported by KENZO
-from userbot import (
-    ALIVE_NAME
-)
+# Import Userbot - Ported by KENZO
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
+
 
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 4
@@ -442,7 +445,6 @@ with bot:
         me = bot.get_me()
         uid = me.id
 
-
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile("open")
@@ -465,7 +467,6 @@ with bot:
                 return await event.edit(
                     "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
                 )
-
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_opeen(event):
@@ -499,18 +500,13 @@ with bot:
                                 "https://kenzo-404.github.io/Lynx-Userbot"),
                             custom.Button.url(
                                 "Dᴇᴠᴇʟᴏᴘᴇʀ",
-                                "t.me/FederationSuperGroup/17")] 
-                    ],
+                                "t.me/FederationSuperGroup/17")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
 
-
-
-
         lynxlogo = "resource/logo/LynxUserbot-Button.jpg"
         plugins = CMD_HELP
-
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
@@ -520,12 +516,12 @@ with bot:
                     f"Hai 👋 [{get_display_name(u)}](tg://user?id={u.id}) Selamat Datang di ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡\nJika Kalian Datang Kesini dan Ingin Mengetahui Lynx-Robot Lebih Lanjut,\nSilahkan Pilih **Menu Bantuan** Dibawah Ini.\n",
                     buttons=[
                         [
-                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
-                                        "t.me/FederationSuperGroup/3"),
-                             Button.url("🚨 𝗠𝗲𝗻𝘂-𝗕𝗮𝗻𝘁𝘂𝗮𝗻 🚨",
-                                        "https://telegra.ph/Bantuan-06-11")],
-                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
-                                        "t.me/FederationSuperGroup/17")],
+                            Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                                       "t.me/FederationSuperGroup/3"),
+                            Button.url("🚨 𝗠𝗲𝗻𝘂-𝗕𝗮𝗻𝘁𝘂𝗮𝗻 🚨",
+                                       "https://telegra.ph/Bantuan-06-11")],
+                        [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
+                                    "t.me/FederationSuperGroup/17")],
                     ]
                 )
 
@@ -540,27 +536,26 @@ with bot:
                     ],
                 )
 
-
         @tgbot.on(events.NewMessage(pattern="/repo"))
         async def handler(event):
             if event.message.from_id != uid:
                 u = await event.client.get_entity(event.chat_id)
                 await event.message.get_sender()
                 text = (
-                   f"Haii 😼 [{get_display_name(u)}](tg://user?id={u.id}) My Name is 𝗟𝘆𝗻𝘅 🐈\n"
-                   f"Lynx Used For Fun On Telegram✨,\n"
-                   f"and For Maintaining Your Group 🛠️.\n"
-                   f"I was **Created by :** @SyndicateTwenty4 For Various Userbots on Github.\n")
+                    f"Haii 😼 [{get_display_name(u)}](tg://user?id={u.id}) My Name is 𝗟𝘆𝗻𝘅 🐈\n"
+                    f"Lynx Used For Fun On Telegram✨,\n"
+                    f"and For Maintaining Your Group 🛠️.\n"
+                    f"I was **Created by :** @SyndicateTwenty4 For Various Userbots on Github.\n")
                 await tgbot.send_file(event.chat_id, lynxlogo, caption=text,
-                                     buttons=[
-                                         [
-                                             custom.Button.url(
-                                                 text="🇮🇩 𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 🇮🇩",
-                                                 url="https://kenzo-404.github.io/Lynx-Userbot/"
-                                             )
-                                         ]
-                                     ]
-                                     )
+                                      buttons=[
+                                          [
+                                              custom.Button.url(
+                                                  text="🇮🇩 𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 🇮🇩",
+                                                  url="https://kenzo-404.github.io/Lynx-Userbot/"
+                                              )
+                                          ]
+                                      ]
+                                      )
 
         @tgbot.on(events.NewMessage(pattern="/ping"))
         async def handler(event):
@@ -605,8 +600,7 @@ with bot:
                                 "https://kenzo-404.github.io/Lynx-Userbot"),
                             custom.Button.url(
                                 "Dᴇᴠᴇʟᴏᴘᴇʀ",
-                                "t.me/FederationSuperGroup/17")] 
-                    ],
+                                "t.me/FederationSuperGroup/17")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
@@ -628,7 +622,6 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_close\((.+?)\)")
@@ -641,11 +634,10 @@ with bot:
                     file=lynxlogo,
                     link_preview=True,
                     buttons=[
-                          Button.url("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/LynxUserbot"),
-                          Button.inline("•Oᴘᴇɴ Mᴇɴᴜ• ", data="open")
+                        Button.url("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/LynxUserbot"),
+                        Button.inline("•Oᴘᴇɴ Mᴇɴᴜ• ", data="open")
                     ]
                 )
-
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -664,7 +656,6 @@ with bot:
             else:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -707,6 +698,5 @@ with bot:
     except BaseException:
         LOGS.info(
             "BOTLOG_CHATID Environment Variable Isn't a "
-            "Valid Entity. Please Check Your Environment variables/config.env File."
-        )
+            "Valid Entity. Please Check Your Environment variables/config.env File.")
         quit(1)
