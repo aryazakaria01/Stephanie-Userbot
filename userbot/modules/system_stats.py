@@ -18,7 +18,7 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, LYNX_TEXT_CUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, STEPHANIE_TEXT_CUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
 from userbot.events import register
 
 
@@ -243,7 +243,7 @@ async def amireallyalive(alive):
         f"╟◈ 💻  `System   :` Ubuntu 20.10\n"
         f"╟◈ 📂  `Plugins  :` {len(modules)} Plugins\n"
         f"┞╼════════════════════╾┤\n"
-        f"├◈ **{LYNX_TEXT_CUSTOM}**\n"
+        f"├◈ **{STEPHANIE_TEXT_CUSTOM}**\n"
         f"╰╼════════════════════╾╯\n"
         f"| [𝗥𝗲𝗽𝗼](https://github.com/aryazakaria01/Stephanie-Userbot) | [𝗦𝘁𝗲𝗽𝗵𝗮𝗻𝗶𝗲 - 𝗧𝗲𝗮𝗺](t.me/StephanieSupportGroup) |")
 
