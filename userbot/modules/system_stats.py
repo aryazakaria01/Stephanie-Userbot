@@ -245,13 +245,13 @@ async def amireallyalive(alive):
         f"┞╼════════════════════╾┤\n"
         f"├◈ **{LYNX_TEXT_CUSTOM}**\n"
         f"╰╼════════════════════╾╯\n"
-        f"| [𝗥𝗲𝗽𝗼](https://github.com/aryazakaria01/Stephanie-Userbot) | [𝗟𝘆𝗻𝘅-𝗧𝗲𝗮𝗺](t.me/StephanieSupportGroup) | 
+        f"| [𝗥𝗲𝗽𝗼](https: // github.com / aryazakaria01 / Stephanie - Userbot) | [𝗟𝘆𝗻𝘅 - 𝗧𝗲𝗮𝗺](t.me / StephanieSupportGroup) |
 
     if ALIVE_LOGO:
         try:
-            logo = ALIVE_LOGO
+            logo=ALIVE_LOGO
             await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            msg=await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(200)
             await msg.delete()
         except BaseException:
@@ -267,11 +267,11 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:kenzo|iam)\s?(.)?")
+@ register(outgoing=True, pattern=r"^\.(?:kenzo|iam)\s?(.)?")
 async def amireallyalive(alive):
-    user = await bot.get_me()
+    user=await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    output = (
+    output=(
         f"**ㅤㅤㅤㅤ ⚡【𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏】⚡**\n"
         f"╔══════════╣۩ ✞ ۩╠══════════╗ \n"
         f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＫΞＮＺＯ](t.me/Badboyanim)             ㅤ ║\n"
@@ -285,9 +285,9 @@ async def amireallyalive(alive):
             )
     if ALIVE_LOGO:
         try:
-            logo = ALIVE_LOGO
+            logo=ALIVE_LOGO
             await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            msg=await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(200)
             await msg.delete()
         except BaseException:
@@ -303,9 +303,9 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@ register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
 async def redis(alive):
-    user = await bot.get_me()
+    user=await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await alive.edit("__Connecting to server.__")
     await alive.edit("__Connecting to server..__")
@@ -350,7 +350,7 @@ async def redis(alive):
     await asyncio.sleep(3)
     await alive.edit("😼")
     await asyncio.sleep(3)
-    output = (
+    output=(
         f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮**\n"
         f"**       ⊏┊[⚡Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](t.me/LynxUserbot) ⊨〛💨 **\n"
         f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯**\n"
@@ -369,12 +369,12 @@ async def redis(alive):
         f"├◈ **Don't forget to support our**\n"
         f"│    **userbot, how to press below.**\n"
         f"╰╼════════════════════╾╯\n"
-        f"| [𝗥𝗲𝗽𝗼](https://github.com/aryazakaria01/Stephanie-Userbot) | [𝗟𝘆𝗻𝘅-𝗧𝗲𝗮𝗺](t.me/StephanieSupportGroup) | 
+        f"| [𝗥𝗲𝗽𝗼](https: // github.com / aryazakaria01 / Stephanie - Userbot) | [𝗟𝘆𝗻𝘅 - 𝗧𝗲𝗮𝗺](t.me / StephanieSupportGroup) |
     if ALIVE_LOGO:
         try:
-            logo = ALIVE_LOGO
+            logo=ALIVE_LOGO
             await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            msg=await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(500)
             await msg.delete()
         except BaseException:
@@ -390,23 +390,23 @@ async def redis(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern="^.edalive")
-async def amireallyaliveuser(username): 
+@ register(outgoing=True, pattern="^.edalive")
+async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
-    message = username.text
-    output = ".aliveu [new username] tidak boleh kosong"
+    message=username.text
+    output=".aliveu [new username] tidak boleh kosong"
     if not (message == ".aliveu" and message[7:8] != " "):
-        newuser = message[8:]
-        global DEFAULTUSER # global statement
-        DEFAULTUSER = username
-        output = "Successfully changed user to " + newuser + "!"
+        newuser=message[8:]
+        global DEFAULTUSER  # global statement
+        DEFAULTUSER=username
+        output="Successfully changed user to " + newuser + "!"
     await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetalive$")
+@ register(outgoing=True, pattern=r"^\.resetalive$")
 async def amireallyalivereset(ureset):
-    global DEFAULTUSER # global statement
-    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node 
+    global DEFAULTUSER  # global statement
+    DEFAULTUSER=str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully Reset User For Ur Alive!" "`")
 
 
