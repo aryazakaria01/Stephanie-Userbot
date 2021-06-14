@@ -41,7 +41,7 @@ async def nekos_media(event):
 
 CMD_HELP.update(
     {
-        "nekos": ">`.nekos <arguments>`"
+        "nekos": ">`+nekos <arguments>`"
         "\nUsage: For fetching images from nekos"
         "\n\nArguments : `8ball`, `anal`, `avatar`, `baka`, `bj`, "
         "`blowjob`, `boobs`, `classic`, `cuddle`, `cum`, "
