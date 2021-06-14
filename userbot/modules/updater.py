@@ -232,7 +232,7 @@ async def upstream(event):
 
 
 CMD_HELP.update({
-    'update': "✘ Pʟᴜɢɪɴ : `Update`"\
+    'update': "✘ Pʟᴜɢɪɴ : `Update`"
     "\n\n⚡𝘾𝙈𝘿⚡: `+update`"
     "\n↳ : Untuk Melihat Update Terbaru dari Stephanie-𝙐𝙎𝙀𝙍𝘽𝙊𝙏."
     "\n\n⚡𝘾𝙈𝘿⚡: `+update -pull`"
