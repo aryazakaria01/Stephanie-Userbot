@@ -7,7 +7,7 @@ from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, BOTLOG_CHATID, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
-from telethon.tl.types import MessageEntityMentionName, ChatAdminRights
+from telethon.tl.types import MessageEntityMentionName
 
 
 async def get_full_user(event):
