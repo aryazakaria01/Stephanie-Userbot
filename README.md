@@ -40,6 +40,29 @@
 
 <a href="https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
+
+**Generate String Using Terminal⤵️**
+```
+    STRING SESSION via TERMUX _>
+
+ 1. First copy the one below.
+
+      $ pkg update -y && pkg upgrade && pkg install wget python
+
+ 2. Wait for the installation to finish, if you have copied the one below.
+
+<T>   $ pip install telethon && wget https://raw.githubusercontent.com/aryazakaria01/Stephanie-Userbot/Stephanie-Userbot/string_session.py && python string_session.py
+
+<P>   $ wget https://raw.githubusercontent.com/aryazakaria01/Stephanie-String-Session/master/pyrogram-session.py && python string_session.py
+
+ <T> (For Telethon) and <P> (For Pyrogram)
+ Just choose Telethon if you want to deploy.
+
+📌Noted = If You Just wanna Change Repo , You No Need Regenerate String Sessions, just use What you have.
+
+```
+
+
 ## <p align="center">DEPLOY TO HEROKU</p>
 
 <p align="center"><a href=""> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
@@ -64,8 +87,21 @@
 *   [ankushKun](https://github.com/ankushKun/weebmax)    WeebMax
 *   [ramadhani892](https://github.com/ramadhani892/RAM-UBOT)    RAM-UBOT
 *   [Telethon](https://github.com/lonamiwebs/telethon) 
+*   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
+*   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
+*   [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
+*   [Mr.Miss](https://github.com/keselekpermen69) - UserButt
+*   [adekmaulana](https://github.com/adekmaulana) - ProjectBish
+*   [MoveAngel](https://github.com/MoveAngel) - One4uBot
+*   [AidilAryanto](https://github.com/aidilaryanto) - ProjectDils 
+*   [Alfianandaa](https://github.com/alfianandaa/ProjectAlf) - ProjectAlf
+*   [AnggaR69s](https://github.com/GengKapak/DCLXVI) - DCLXVI
+*   [kandnub](https://github.com/kandnub) - TG-UserBot
+*   [༺αиυвιѕ༻](https://github.com/Dark-Princ3) - X-tra-Telegram
+*   [Sahyam2019](https://github.com/sahyam2019/oub-remix) - oub-remix
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
 ## 卍 Stay Support 卍
-*   [Userge](https://github.com/UsergeTeam/Userge) and [Telethon](https://github.com/lonamiwebs/telethon)
+* [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
+# [![Sparkline](https://stars.medv.io/Lonamiwebs/telethon.svg)](https://stars.medv.io/Lonamiwebs/telethon)
