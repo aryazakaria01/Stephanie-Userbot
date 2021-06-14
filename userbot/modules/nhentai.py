@@ -108,7 +108,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "nhentai": ">`.nhentai` <code or link or `random`>"
+        "nhentai": ">`+nhentai` <code or link or `random`>"
         "\nUsage: Search nhentai code or link and view on telegra.ph"
     }
 )
