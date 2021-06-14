@@ -17,7 +17,7 @@ from telethon import functions
 from speedtest import Speedtest
 from userbot import CMD_HELP, StartTime, ALIVE_NAME
 from userbot.events import register
-from userbot.utils import humanbytes 
+from userbot.utils import humanbytes
 
 
 async def get_readable_time(seconds: int) -> str:
@@ -190,7 +190,7 @@ async def pingme(pong):
 
 
 CMD_HELP.update({
-        "speedtest": "✘ Pʟᴜɢɪɴ : `Speed Test`\
+    "speedtest": "✘ Pʟᴜɢɪɴ : `Speed Test`\
          \n\n⚡𝘾𝙈𝘿⚡: `+ping` | `+lping` | `+xping` | `+sping`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
          \n\n⚡𝘾𝙈𝘿⚡: `+pong`\
