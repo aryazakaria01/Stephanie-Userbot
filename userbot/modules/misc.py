@@ -112,7 +112,7 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭‒─‒──────────‒─‒╮\n"
         "│                   ʀᴇᴘᴏ\n"
-        "│       [卍 Stephanie-Project 卍](https://github.com/Vckyou/Geez-UserBot)\n"
+        "│       [卍 Stephanie-Project 卍](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
         "├‒─‒──────────‒─‒╯\n"
         "│卍 **ᴏᴡɴᴇʀ 卍:** [Arya Zakaria](t.me/Badboyanim)\n"
         "╰‒─‒──────────‒─‒╯\n"
