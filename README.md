@@ -63,9 +63,9 @@
 ```
 
 
-## <p align="center">DON'T TOUCH IT'S DANGEROUS</p>
+## <p align="center">DEPLOY 卍 STEPHANIE-USERBOT 卍</p>
 
-<p align="center"><a href=""> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
+<p align="center"><a href="https://github.com/aryazakaria01/Stephanie-Userbot"> <img src="https://img.shields.io/badge/Don't%20Touch%20Bro%20,%20It's Dangerous-Purple?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
