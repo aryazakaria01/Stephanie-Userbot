@@ -1,3 +1,11 @@
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
+#
+# You can find misc modules, which dont fit in anything xD
+""" Userbot module for other small commands. """
+
 from random import randint
 from time import sleep
 from os import execl
@@ -16,10 +24,10 @@ import re
 from PIL import Image
 
 
+# Ported for Lynx-Userbot by @SyndicateTwenty4
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-REPOLINK = str(
-    UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/aryazakaria01/Stephanie-Userbot"
+# REPOLINK = str(UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/KENZO-404/Lynx-Userbot"
 # ============================================
 
 opener = urllib.request.build_opener()
@@ -29,11 +37,11 @@ opener.addheaders = [('User-agent', useragent)]
 
 @register(outgoing=True, pattern="^.random")
 async def randomise(items):
-    """ For .random command, get a random item from the list of items. """
+    """For .random command, get a random item from the list of items."""
     itemo = (items.text[8:]).split()
     if len(itemo) < 2:
         await items.edit(
-            "`2 or more items are required! Check .help random for more info.`"
+            "`2 or more items are required! Check +help random for more info.`"
         )
         return
     index = randint(1, len(itemo) - 1)
@@ -43,7 +51,7 @@ async def randomise(items):
 
 @register(outgoing=True, pattern="^.sleep ([0-9]+)$")
 async def sleepybot(time):
-    """ For .sleep command, let the userbot snooze for a few second. """
+    """For .sleep command, let the userbot snooze for a few second."""
     counter = int(time.pattern_match.group(1))
     await time.edit("`I am sulking and snoozing...`")
     if BOTLOG:
@@ -58,13 +66,13 @@ async def sleepybot(time):
 
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
-    """ For .shutdown command, shut the bot down."""
+    """For .shutdown command, shut the bot down."""
     await event.edit("`Mematikan Stephanie-Userbot....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`Userbot Telah Dimatikan`")
+                                        "`Stephanie-Userbot Telah Dimatikan`")
     await bot.disconnect()
 
 
@@ -75,7 +83,7 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Userbot Telah Di Restart`")
+                                        "`Stephanie-Userbot Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -87,7 +95,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[卍 Stephanie-Userbot Repo](https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/README.md)"
+        "\n[卍 stephanie-Userbot 卍 Repo](https://github.com/aryazakaria01/Stephanie-Userbot/blob/Stephanie-Userbot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
@@ -108,15 +116,15 @@ async def repeat(rep):
 
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
-    """ For .repo command, just returns the repo URL. """
+    """For .repo command, just returns the repo URL."""
     await wannasee.edit(
-        "╭‒─‒──────────‒─‒╮\n"
-        "│                   ʀᴇᴘᴏ\n"
-        "│       [卍 Stephanie-Project 卍](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
-        "├‒─‒──────────‒─‒╯\n"
-        "│卍 **ᴏᴡɴᴇʀ 卍:** [Arya Zakaria](t.me/Badboyanim)\n"
-        "╰‒─‒──────────‒─‒╯\n"
-        "  卍 𝗟𝗶𝗰𝗲𝗻𝘀𝗲 卍: [GPL-3.0 License](https://github.com/aryazakaria01/Stephanie-Userbot/blob/Geez-UserBot/LICENSE)"
+        "╭─━━━━━━━━━━━━━─╮\n"
+        "                  ʀᴇᴘᴏ\n"
+        "    [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
+        "╭─━━━━━━━━━━━━━─╯\n"
+        "│⊙ **Dᴇᴠᴇʟᴏᴘᴇʀ :** [ᴀxᴇʟ](https://github.com/aryazakaria01)\n"
+        "╰━━━━━━━━━━━━━━━╯\n"
+        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/aryazakaria01/Stephanie-Userbot/blob/Stephanie-Userbot/LICENSE)"
     )
 
 
@@ -146,7 +154,7 @@ async def raw(event):
 
 @register(outgoing=True, pattern=r"^.reverse(?: |$)(\d*)")
 async def okgoogle(img):
-    """ For .reverse command, Google search images and stickers. """
+    """For .reverse command, Google search images and stickers."""
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
 
@@ -264,27 +272,27 @@ async def scam(results, lim):
 
 CMD_HELP.update({
     "random":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.random <item1> <item2> ... <itemN>`\
+    "⚡𝘾𝙈𝘿⚡: `+random <item1> <item2> ... <itemN>`\
     \n↳ : Get a random item from the list of items.",
     "sleep":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sleep <seconds>`\
+    "⚡𝘾𝙈𝘿⚡: `+sleep <seconds>`\
     \n↳ : Let yours snooze for a few seconds.",
     "shutdown":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.shutdown`\
+    "⚡𝘾𝙈𝘿⚡: `+shutdown`\
     \n↳ : Shutdown bot",
     "repo":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.repo`\
+    "⚡𝘾𝙈𝘿⚡: `+repo`\
     \n↳ : Github Repo of this bot",
     "readme":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `.readme`\
+    "⚡𝘾𝙈𝘿⚡: `+readme`\
     \n↳ : Provide links to setup the userbot and it's modules.",
     "repeat":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.repeat <no> <text>`\
+    "⚡𝘾𝙈𝘿⚡: `+repeat <no> <text>`\
     \n↳ : Repeats the text for a number of times. Don't confuse this with spam tho.",
     "restart":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restart`\
+    "⚡𝘾𝙈𝘿⚡: `+restart`\
     \n↳ : Restarts the bot !!",
     "raw":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.raw`\
+    "⚡𝘾𝙈𝘿⚡: `+raw`\
     \n↳ : Get detailed JSON-like formatted data about replied message."
 })
