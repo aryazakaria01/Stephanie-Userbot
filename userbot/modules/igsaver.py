@@ -2,11 +2,7 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # You may not use this file except in compliance with the License.
 
-import redis
-import platform
-import asyncio
 
-from asyncio import create_subprocess_exec as asyncrunapp
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot.events import register
