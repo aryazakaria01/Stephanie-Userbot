@@ -120,7 +120,7 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭─━━━━━━━━━━━━━─╮\n"
         "                  ʀᴇᴘᴏ\n"
-        "    [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
+        "    [⚡𝑺𝑻𝑬𝑷𝑯𝑨𝑵𝑰𝑬-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/aryazakaria01/Stephanie-Userbot)\n"
         "╭─━━━━━━━━━━━━━─╯\n"
         "│⊙ **Dᴇᴠᴇʟᴏᴘᴇʀ :** [ᴀxᴇʟ](https://github.com/aryazakaria01)\n"
         "╰━━━━━━━━━━━━━━━╯\n"
