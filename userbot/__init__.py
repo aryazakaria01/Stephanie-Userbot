@@ -1,10 +1,18 @@
-""" Userbot initialization. """
+# Copyright (C) 2019 The Raphielscape Company LLC.
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
+# Credits @PacarFerdilla / @Ultroid / @Geezing_bot
+# Ported @Badboyanim
+"""Userbot initialization."""
 
-import logging
 import os
 import time
 import re
 import redis
+import io
+import random
+
+from datetime import datetime
 
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
@@ -19,6 +27,8 @@ from dotenv import load_dotenv
 from requests import get
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
+from telethon import Button, events, functions, types
+from telethon.utils import get_display_name
 
 redis_db = None
 
@@ -79,9 +89,7 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
 
 # Pm Permit Img
-PM_PERMIT_PIC = os.environ.get(
-    "PM_PERMIT_PIC",
-    None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
+PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -108,7 +116,7 @@ UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
     "https://github.com/aryazakaria01/Stephanie-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Stephanie-UserBot")
+    "UPSTREAM_REPO_BRANCH", "Stephanie-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -135,15 +143,14 @@ if REDIS_URI and REDIS_PASSWORD:
         )
         redis_connection.ping()
     except Exception as e:
-        logging.exception(e)
+        LOGGER.exception(e)
         print()
-        logging.error(
+        LOGGER.error(
             "Make sure you have the correct Redis endpoint and password "
             "and your machine can make connections."
         )
 
 # Chrome Driver and Headless Google Chrome Binaries
-CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
 GOOGLE_CHROME_BIN = os.environ.get(
     "GOOGLE_CHROME_BIN") or "/usr/bin/google-chrome"
@@ -173,8 +180,8 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-# Untuk Perintah .geez
-GEEZ_TEKS_KUSTOM = os.environ.get("GEEZ_TEKS_KUSTOM", None)
+# Untuk Perintah .lynx (alive)
+LYNX_TEXT_CUSTOM = os.environ.get("LYNX_TEXT_CUSTOM", None)
 
 # Default .alive Name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
@@ -193,10 +200,10 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Geez-UserBot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Lynx-Userbot")
 
 # Bot Version
-BOT_VER = os.environ.get("BOT_VER", "5.0")
+BOT_VER = os.environ.get("BOT_VER", "0.2.9")
 
 # Default .alive Username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
@@ -206,7 +213,10 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/c92925807ed5a1c68ebff.png"
+    "ALIVE_LOGO") or "https://telegra.ph/file/f3c656862a017f945c0bc.png"
+
+# Link Instagram for CMD Alive 
+INSTAGRAM_ALIVE = os.environ.get("INSTAGRAM_ALIVE", None)
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -231,6 +241,7 @@ G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
 G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
 G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
 G_DRIVE_FOLDER_ID = os.environ.get("G_DRIVE_FOLDER_ID", None)
+G_DRIVE_INDEX_URL = os.environ.get("G_DRIVE_INDEX_URL", None)
 TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY",
                                          "./downloads")
 # Google Photos
@@ -352,7 +363,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```Congratulations Your Bot 卍 ════〠 Stephanie Userbot 〠════ 卍 Has Been Active !!```")
+    await bot.send_message(BOTLOG_CHATID, "```卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍 Has Been Active!!```")
     return
 
 with bot:
@@ -375,19 +386,22 @@ ISAFK = False
 AFKREASON = None
 ZALG_LIST = {}
 
+#Import Userbot - Ported by KENZO
+from userbot import (
+    ALIVE_NAME
+)
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
-
 def paginate_help(page_number, loaded_modules, prefix):
-    number_of_rows = 5
-    number_of_cols = 4
+    number_of_rows = 4
+    number_of_cols = 3
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} 🔰".format("🔰", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {} 」◑".format("◐「", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -403,10 +417,13 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "⋖╯", data="{}_prev({})".format(prefix, modulo_page)
+                    "⋖╯Pʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "╰⋗", data="{}_next({})".format(prefix, modulo_page)
+                    "ᴄʟᴏꜱᴇ", data="{}_close({})".format(prefix, modulo_page)
+                ),
+                custom.Button.inline(
+                    "Nᴇxᴛ╰⋗", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -424,51 +441,131 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
-        logo = "https://telegra.ph/file/03cc82e4ac5c3aa5f9e97.jpg"
+
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile("open")
+            )
+        )
+        async def opeen(event):
+            try:
+                tgbotusername = BOT_USERNAME
+                if tgbotusername is not None:
+                    results = await event.client.inline_query(tgbotusername, "@LynxRobot")
+                    await results[0].click(
+                        event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
+                    )
+                    await event.delete()
+                else:
+                    await event.edit(
+                        "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped.`"
+                    )
+            except Exception:
+                return await event.edit(
+                    "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
+                )
+
+
+        lynxlogo = "resource/logo/LynxUserbot-Button.jpg"
+        plugins = CMD_HELP
+        vr = BOT_VER
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("卍 Stephanie Userbot 卍, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/aryazakaria01/Stephanie-Userbot)")
-            else:
-                await event.reply(f"`Hai {DEFAULTUSER}\n\nApa Kabarmu ? 😊`")
+                u = await event.client.get_entity(event.chat_id)
+                await event.reply(
+                    f"Hai 👋 [{get_display_name(u)}](tg://user?id={u.id}) Selamat Datang di 卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍\nJika Kalian Datang Kesini dan Ingin Mengetahui Stephanie-Robot Lebih Lanjut,\nSilahkan Pilih **Menu Bantuan** Dibawah Ini.\n",
+                    buttons=[
+                        [
+                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                                        "https://t.me/StephanieUserbot"),
+                             Button.url("🚨 𝗠𝗲𝗻𝘂-𝗕𝗮𝗻𝘁𝘂𝗮𝗻 🚨",
+                                        "https://telegra.ph/Bantuan-06-11")],
+                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
+                                        "t.me/Badboyanim")],
+                    ]
+                )
+
+        @tgbot.on(events.NewMessage(pattern="/deploy"))
+        async def handler(event):
+            if event.message.from_id != uid:
+                await event.reply(
+                    f"卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍 Deploy to Heroku, Click Here 👇🏻",
+                    buttons=[
+                        [Button.url("⚒️ 𝗗𝗘𝗣𝗟𝗢𝗬 ⚒️", "https://heroku.com/deploy?template=https://github.com/aryazakaria01/Stephanie-Userbot")],
+                        [Button.url("👥 𝗚𝗥𝗢𝗨𝗣 👥", "t.me/StephanieSupportGroup")],
+                    ],
+                )
+
+
+        @tgbot.on(events.NewMessage(pattern="/repo"))
+        async def handler(event):
+            if event.message.from_id != uid:
+                u = await event.client.get_entity(event.chat_id)
+                await event.message.get_sender()
+                text = (
+                   f"Haii 😼 [{get_display_name(u)}](tg://user?id={u.id}) My Name is **Stephanie** 🐈\n"
+                   f"Lynx Used For Fun On Telegram✨,\n"
+                   f"and For Maintaining Your Group 🛠️.\n"
+                   f"I was **Created by :** @Badboyanim For Various Userbots on Github.\n")
+                await tgbot.send_file(event.chat_id, lynxlogo, caption=text,
+                                     buttons=[
+                                         [
+                                             custom.Button.url(
+                                                 text="🇮🇩 𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 🇮🇩",
+                                                 url="https://aryazakaria01.github.io/Stephanie-Userbot/"
+                                             )
+                                         ]
+                                     ]
+                                     )
+
+        @tgbot.on(events.NewMessage(pattern="/ping"))
+        async def handler(event):
+            if event.message.from_id != uid:
+                start = datetime.now()
+                end = datetime.now()
+                ms = (end - start).microseconds / 1000
+                await tgbot.send_message(
+                    event.chat_id,
+                    f"**PONG !!**\n `{ms}ms`",
+                )
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@UserButt"):
+            if event.query.user_id == uid and query.startswith("@LynxRobot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                result = builder.article(
-                    "Harap Gunakan .help Untuk Perintah",
-                    text="{}"
-                    f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"
-                    "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
-                        "** ╡卍 Stephanie Userbot 卍╞ **",
+                result = builder.photo(
+                    file=lynxlogo,
+                    link_preview=False,
+                    text=f"\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n◎› **Bᴏᴛ ᴠᴇʀ :** `v.{len(vr)}`\n◎› **Pʟᴜɢɪɴꜱ :** `{len(plugins)}`\n\n◎› **Cᴏᴘʏʀɪɢʜᴛ © 𝟤𝟢𝟤𝟣 Stephanie-Uꜱᴇʀʙᴏᴛ**".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
-                    link_preview=False,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ╡卍 Stephanie Userbot 卍╞ ",
-                    text="Daftar Modul",
+                    "Bantuan Dari 卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍 ",
+                    text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ╡卍 Stephanie Userbot 卍╞ ",
-                    text="""**Anda Bisa Membuat 卍 Stephanie Userbot 卍 Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
+                    " ╔╡卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍╞╗ ",
+                    text="""**Anda Bisa Membuat 卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍 Anda Sendiri\nDengan Cara :**__Tekan Dibawah Ini__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "卍 Stephanie 卍",
-                                "https://github.com/aryazakaria01/Stephanie-Userbot"),
+                                "卍**Stephanie**卍",
+                                "https://kenzo-404.github.io/Lynx-Userbot"),
                             custom.Button.url(
-                                "卍 Owner 卍",
-                                "t.me/Badboyanim")]],
+                                "Dᴇᴠᴇʟᴏᴘᴇʀ",
+                                "t.me/FederationSuperGroup/17")] 
+                    ],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
@@ -490,6 +587,25 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"helpme_close\((.+?)\)")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:  # @LynxUserbot
+                # https://t.me/TelethonChat/115200
+                await event.edit(
+                    file=lynxlogo,
+                    link_preview=True,
+                    buttons=[
+                          Button.url("卍**Stephanie**-𝙐𝙎𝙀𝙍𝘽𝙊𝙏卍", "t.me/Geezing_bot"),
+                          Button.inline("•Oᴘᴇɴ Mᴇɴᴜ• ", data="open")
+                    ]
+                )
+
+
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_prev\((.+?)\)")
@@ -508,9 +624,10 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
+
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(b"ub_modul_(.*)")
+                data=re.compile(rb"ub_modul_(.*)")
             )
         )
         async def on_plug_in_callback_query_handler(event):
@@ -521,7 +638,7 @@ with bot:
                 if len(cmdhel) > 150:
                     help_string = (
                         str(CMD_HELP[modul_name]).replace('`', '')[:150] + "..."
-                        + "\n\nBaca Teks Berikutnya Ketik .help "
+                        + "\n\nBaca Text Berikutnya Ketik .help "
                         + modul_name
                         + " "
                     )
@@ -536,19 +653,19 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"🚫!WARNING!🚫 Dilarang Menggunakan Milik {DEFAULTUSER}."
+                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
             "Mode Inline Bot Mu Nonaktif. "
-            "Untuk Mengaktifkan Pergi Ke @BotFather, lalu settings bot > pilih mode inline > Turn On. ")
+            "Untuk Mengaktifkannya, Silahkan Pergi Ke @BotFather Lalu, Settings Bot > Pilih Mode Inline > Turn On. ")
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
     except BaseException:
         LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file."
+            "BOTLOG_CHATID Environment Variable Isn't a "
+            "Valid Entity. Please Check Your Environment variables/config.env File."
         )
         quit(1)
