@@ -369,7 +369,7 @@ async def redis(alive):
         f"├◈ **Don't forget to support our**\n"
         f"│    **userbot, how to press below.**\n"
         f"╰╼════════════════════╾╯\n"
-        f"| [𝗥𝗲𝗽𝗼](https: // github.com / aryazakaria01 / Stephanie - Userbot) | [𝗦𝘁𝗲𝗽𝗵𝗮𝗻𝗶𝗲 - 𝗧𝗲𝗮𝗺](t.me / StephanieSupportGroup) |
+        f"| [𝗥𝗲𝗽𝗼](https://github.com/aryazakaria01/Stephanie-Userbot) | [𝗦𝘁𝗲𝗽𝗵𝗮𝗻𝗶𝗲 - 𝗧𝗲𝗮𝗺](t.me/StephanieSupportGroup) |")
     if ALIVE_LOGO:
         try:
             logo=ALIVE_LOGO
